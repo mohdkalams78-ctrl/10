@@ -1,0 +1,24 @@
+NAME : SHAIKH KASHIF
+UIN : 251P019
+CLASS/DIV: COMPS/C
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    int arr[n];
+    printf("Enter %d elements:\n", n);
+    for(int i = 0; i < n; i++)
+        scanf("%d", &arr[i]);
+
+    int *ptr = arr + n - 1;  // Pointer to last element
+
+    printf("Array in reverse order:\n");
+    for(int i = 0; i < n; i++)
+        printf("%d ", *(ptr - i));
+
+    printf("\n");
+    return 0;
+}
